@@ -32,8 +32,17 @@ checkbox.addEventListener("change", function () {
         }, 500);
     }
 });
-
     newDiv.appendChild(input);
     newDiv.appendChild(checkbox);
     container.appendChild(newDiv);
+});
+
+const toggle = document.querySelector("#mode-toggle");
+
+toggle.addEventListener("change", function() {
+  if (this.checked) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
 });
